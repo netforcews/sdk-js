@@ -1,0 +1,19 @@
+{
+    "name": "@netforcews/sdk-js",
+    "version": "0.1.0",
+    "license": "MIT",
+    "author": "Bruno Goncalves",
+    "private": false,
+    "keywords": [
+        "netforcews",
+        "sdk"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:netforcews/sdk-js.git"
+    },
+    "main": "./src/index.js",
+    "dependencies": {
+        "crypto-js": "^3.1.9-1"
+    }
+}
