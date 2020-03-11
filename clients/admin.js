@@ -1,5 +1,6 @@
 const SdkClient = require('../src/SdkClient');
 const Inquilino = require('../resources/Inquilino');
+const Usuario = require('../resources/Usuario');
 
 class AdminClient extends SdkClient
 {
@@ -12,7 +13,8 @@ class AdminClient extends SdkClient
     {
         super(core);
 
-        this.inquilino = new Inquilino(core);
+        this.inquilinos = new Inquilino(core);
+        this.usuarios = new Usuario(core);
     }
 }
 
