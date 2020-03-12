@@ -1,6 +1,6 @@
 {
     "name": "@netforcews/sdk-js",
-    "version": "0.1.20",
+    "version": "0.1.30",
     "license": "MIT",
     "author": "Bruno Goncalves",
     "private": false,
@@ -8,10 +8,6 @@
         "netforcews",
         "sdk"
     ],
-    "scripts": {
-        "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-        "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules"
-    },
     "repository": {
         "type": "git",
         "url": "git@github.com:netforcews/sdk-js.git"
@@ -20,6 +16,10 @@
     "dependencies": {
         "axios": "^0.19.2",
         "crypto-js": "^3.1.9-1"
+    },
+    "scripts": {
+        "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+        "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",
