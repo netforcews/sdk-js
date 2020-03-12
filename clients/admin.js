@@ -9,12 +9,12 @@ class AdminClient extends SdkClient
      * 
      * @param {SdkCore} core Sdk
      */
-    constructor (core)     
+    constructor ()     
     {
-        super(core);
+        super();
 
-        this.inquilinos = new Inquilino(core);
-        this.usuarios = new Usuario(core);
+        this.inquilinos = new Inquilino();
+        this.usuarios = new Usuario();
     }
 }
 

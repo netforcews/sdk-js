@@ -1,16 +1,14 @@
-const SdkCore = require('./SdkCore');
 const axios = require('axios');
+const nws = require('./SdkCore');
 
 class SdkClient
 {
     /**
      * Construtor.
-     * 
-     * @param {SdkCore} core Objeto core do sdk
      */
-    constructor (core)
+    constructor ()
     {
-        this.$core = core;
+        this.$core = nws;
     }
 
     /**

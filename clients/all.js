@@ -1,6 +1,4 @@
-module.exports = (core) => {
+const nws = require('../src/SdkCore');
 
-    core.extend('auth', require('./auth'));
-    core.extend('admin', require('./admin'));
-
-};
+nws.extend('auth', require('./auth'));
+nws.extend('admin', require('./admin'));

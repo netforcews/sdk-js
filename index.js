@@ -1,8 +1,6 @@
-const SdkCore = require('./src/SdkCore');
+const nws = require('./src/SdkCore');
 
-var core = new SdkCore();
+// Carregar clients
+require('./clients/all');
 
-// carregar clients
-require('./clients/all')(core);
-
-module.exports = core;
+module.exports = nws;

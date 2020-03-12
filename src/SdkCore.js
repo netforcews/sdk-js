@@ -5,16 +5,26 @@ class SdkCore
     /**
      * Construtor.
      */
-    constructor(options = {})
+    constructor()
     {
-        var opts = {
+        this.config = {
             env: Consts.ENV_PRODUCTION
         };
-        Object.assign(opts, options);
 
-        this.clients = {};
-        this.$env = opts.env;
         this.$accessToken = null;
+    }
+
+    /**
+     * Atribuir configuracao.
+     * 
+     * @param {Object} values Novo valores
+     * @returns {SdkCore}
+     */
+    setConfig(values)
+    {
+        Object.assign(this.config, values);
+
+        return this;
     }
 
     /**
@@ -24,22 +34,7 @@ class SdkCore
      */
     get version()
     {
-        return '1.0.0';
-    }
-
-    /**
-     * Retorna o env.
-     * 
-     * @returns {String}
-     */
-    get env()
-    {
-        return this.$env;
-    }
-
-    set env(value)
-    {
-        this.$env = value;        
+        return Consts.version;
     }
 
     /**
@@ -49,11 +44,7 @@ class SdkCore
      */
     get endpoints()
     {
-        return {
-            production : '',
-            sandbox    : '...',
-            dev        : 'http://localhost:3000'
-        };
+        return Consts.endpoints;
     }
 
     /**
@@ -79,7 +70,7 @@ class SdkCore
      */
     getUrl(part)
     {
-        var base = this.getEndpoint(this.$env);
+        var base = this.getEndpoint(this.config.env);
         if (!base) {
             throw new Error(`Endpoint ${this.$env} nao foi definido`);
         }
@@ -98,9 +89,7 @@ class SdkCore
     {
         var $this = this;
 
-        this.clients[client] = () => {
-            return new classClient($this);
-        };
+        this[client] = classClient;
 
         return this;
     }
@@ -119,4 +108,4 @@ class SdkCore
     }
 }
 
-module.exports = SdkCore;
+module.exports = new SdkCore();

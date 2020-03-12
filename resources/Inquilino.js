@@ -2,9 +2,9 @@ const SdkResource = require('../src/SdkResource');
 
 class Inquilino extends SdkResource
 {
-    constructor(core)
+    constructor()
     {
-        super(core, 'inquilinos');
+        super('inquilinos');
     }
 }
 

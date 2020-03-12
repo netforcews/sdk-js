@@ -2,9 +2,9 @@ const SdkClient = require('./SdkClient');
 
 class SdkResource extends SdkClient
 {
-    constructor (core, part)
+    constructor (part)
     {
-        super(core);
+        super();
 
         this.$part = part;
     }
