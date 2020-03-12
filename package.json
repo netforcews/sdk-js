@@ -1,6 +1,6 @@
 {
     "name": "nws-sdk",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "license": "MIT",
     "author": "Bruno Goncalves",
     "private": false,
@@ -16,6 +16,9 @@
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
         "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules"
+    },
+    "dependencies": {
+        "axios": "^0.19.2"
     },
     "devDependencies": {
         "axios": "^0.19.2",
