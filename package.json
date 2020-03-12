@@ -1,6 +1,6 @@
 {
-    "name": "@netforcews/sdk-js",
-    "version": "0.1.30",
+    "name": "nws-sdk",
+    "version": "0.1.2",
     "license": "MIT",
     "author": "Bruno Goncalves",
     "private": false,
@@ -12,16 +12,13 @@
         "type": "git",
         "url": "git@github.com:netforcews/sdk-js.git"
     },
-    "main": "./dist/sdk.js",
-    "dependencies": {
-        "axios": "^0.19.2",
-        "crypto-js": "^3.1.9-1"
-    },
+    "main": "./index.js",
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
         "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules"
     },
     "devDependencies": {
+        "axios": "^0.19.2",
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
         "babel-preset-env": "^1.6.0",

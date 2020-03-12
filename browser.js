@@ -1,8 +1,7 @@
-const loadNWS = require('./index');
-const Consts = require('./src/Consts');
+const nws = require('./index');
 
 ((window) => {
 
-    window.nws = loadNWS({ env: Consts.ENV_DEVELOPER });
+    window.nws = nws;
 
 })(window);

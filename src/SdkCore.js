@@ -37,6 +37,11 @@ class SdkCore
         return this.$env;
     }
 
+    set env(value)
+    {
+        this.$env = value;        
+    }
+
     /**
      * Retorna a lista de endpoints base pelo env.
      * 

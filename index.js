@@ -1,10 +1,8 @@
 const SdkCore = require('./src/SdkCore');
 
-module.exports = (options = {}) => {
-    var core = new SdkCore(options);
+var core = new SdkCore();
 
-    // carregar clients
-    require('./clients/all')(core);
+// carregar clients
+require('./clients/all')(core);
 
-    return core;
-}
+module.exports = core;
