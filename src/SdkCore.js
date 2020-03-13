@@ -28,6 +28,42 @@ class SdkCore
     }
 
     /**
+     * Setar env como producao.
+     * 
+     * @returns {SdkCore}
+     */
+    production()
+    {
+        this.config.env = Consts.ENV_PRODUCTION;
+
+        return this;
+    }
+
+    /**
+     * Setar env como dev.
+     * 
+     * @returns {SdkCore}
+     */
+    dev()
+    {
+        this.config.env = Consts.ENV_DEVELOPER;
+
+        return this;
+    }
+
+    /**
+     * Setar env como sandbox.
+     * 
+     * @returns {SdkCore}
+     */
+    sandbox()
+    {
+        this.config.env = Consts.ENV_SANDBOX;
+
+        return this;
+    }
+
+    /**
      * Retorna a versao do SDK.
      * 
      * @returns {String}
