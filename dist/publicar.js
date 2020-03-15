@@ -2,6 +2,7 @@
 
 const path = require('path');
 const fs = require('fs');
+const clc = require("cli-color");
 
 // Carregar parametros
 pathOrigem = path.resolve((process.argv.length >= 3) ? process.argv[2] : './dist');
@@ -16,7 +17,7 @@ if (!fs.existsSync(fileOrigem)) {
     return;
 }
 
-console.log(`Copiando lib [${fileSdk}] para: ${fileDestino}...`);
+console.log(`Copiando lib [${fileSdk}] para: [${clc.green(fileDestino)}]`);
 fs.copyFileSync(fileOrigem, fileDestino);
 
 console.log(`Publicado!`);

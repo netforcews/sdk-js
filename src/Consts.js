@@ -12,7 +12,7 @@ module.exports = {
      * Endpoints
      */
     endpoints: {
-        production : '...',
+        production : 'https://api.colmeiatech.com',
         sandbox    : '...',
         dev        : 'http://localhost:3000'
     }

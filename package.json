@@ -14,9 +14,9 @@
     },
     "main": "./index.js",
     "scripts": {
-        "build"   : "cross-env NODE_ENV=production webpack --progress --hide-modules && npm run publicar",
-        "dev"     : "cross-env NODE_ENV=development webpack --progress --hide-modules",
-        "publicar": "node ./dist/publicar.js ./dist D:\\www\\libs"
+        "build": "cross-env NODE_ENV=production webpack --progress --hide-modules && npm run publicar",
+        "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
+        "publicar": "node ./dist/publicar.js ./dist D:\\www\\app\\web\\public\\js"
     },
     "dependencies": {
         "axios": "^0.19.2"
@@ -31,6 +31,7 @@
         "@babel/plugin-transform-runtime": "^7.8.3",
         "cross-env": "^5.0.5",
         "file-loader": "^1.1.4",
-        "webpack": "^3.6.0"
+        "webpack": "^3.6.0",
+        "cli-color": "^2.0.0"
     }
 }
