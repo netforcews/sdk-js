@@ -40,6 +40,19 @@ class AuthClient extends SdkClient
     {
         return await this.requestJson('get', 'auth/me');
     }
+
+    /**
+     * Solicitar email par atrocar senha.
+     * 
+     * @param {String} email E-mail do usuário
+     * @returns {Object}
+     */
+    async forgotPassword(email)
+    {
+        return await this.requestJson('post', 'auth/forgotpassword', {
+            email: email
+        });
+    }
 }
 
 module.exports = AuthClient;
