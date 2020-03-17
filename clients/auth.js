@@ -53,6 +53,23 @@ class AuthClient extends SdkClient
             email: email
         });
     }
+
+    /**
+     * Reset a senha pelo token.
+     * 
+     * @param {String} token Token de autorização
+     * @param {String} novaSenha Nova senha
+     * @param {String} confirmacao Confirmação da nova senha
+     * @returns {Object}
+     */
+    async resetPassword(token, novaSenha, confirmacao)
+    {
+        return await this.requestJson('post', 'auth/resetpassword', {
+            token: token,
+            senha: novaSenha,
+            confirmacao: confirmacao
+        });
+    }
 }
 
 module.exports = AuthClient;
