@@ -16,6 +16,16 @@ class AdminClient extends SdkClient
         this.inquilinos = new Inquilino();
         this.usuarios = new Usuario();
     }
+
+    /**
+     * Retorna informacoes de versao.
+     * 
+     * @returns {Object}
+     */
+    async version()
+    {
+        return await this.requestJson('get', 'version');
+    }
 }
 
 module.exports = AdminClient;
