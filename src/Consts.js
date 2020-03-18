@@ -1,5 +1,5 @@
 module.exports = {
-    version: '1.0.0',
+    version: '1.0.1',
     
     /**
      * Envs
@@ -12,7 +12,7 @@ module.exports = {
      * Endpoints
      */
     endpoints: {
-        production : 'https://api.colmeiatech.com',
+        production : 'https://api.netforcews.com',
         sandbox    : '...',
         dev        : 'http://localhost:3000'
     }

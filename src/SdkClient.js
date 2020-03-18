@@ -18,9 +18,10 @@ class SdkClient
      * @param {String} part Part da url
      * @param {Object} params Parametros da requisicao
      * @param {Object} headers Informacoes para o header
+     * @param {Object} queryInPost Query quando POST ou PUT
      * @returns {any}
      */
-    async request(method, part, params = {}, headers = {})
+    async request(method, part, params = {}, headers = {}, queryInPost = {})
     {
         method = method.toLowerCase();
 
@@ -42,6 +43,7 @@ class SdkClient
 
         if ((method == 'post') || (method == 'put')) {
             req.data = params;
+            req.params = queryInPost;
         } else {
             req.params = params;
         }
@@ -62,15 +64,16 @@ class SdkClient
      * @param {String} method Metodo da requisicao
      * @param {String} part Part da url
      * @param {Object} params Parametros da requisicao
+     * @param {Object} queryInPost Query quando POST ou PUT
      * @returns {any}
      */
-    async requestJson(method, part, params = {})
+    async requestJson(method, part, params = {}, queryInPost = {})
     {
         var headers = {
             'Content-Type': 'application/json'
         };
 
-        return await this.request(method, part, params, headers);
+        return await this.request(method, part, params, headers, queryInPost);
     }
 }
 
