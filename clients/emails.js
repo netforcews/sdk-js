@@ -13,6 +13,16 @@ class EmailsClient extends SdkClient
     {
         return await this.requestJson('post', 'emails/send', message, { sync: sync });
     }
+
+    /**
+     * Retorna informacoes de versao.
+     * 
+     * @returns {Object}
+     */
+    async version()
+    {
+        return await this.requestJson('get', 'emails/version');
+    }    
 }
 
 module.exports = EmailsClient;

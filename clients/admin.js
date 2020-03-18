@@ -24,7 +24,7 @@ class AdminClient extends SdkClient
      */
     async version()
     {
-        return await this.requestJson('get', 'version');
+        return await this.requestJson('get', 'admin/version');
     }
 }
 
