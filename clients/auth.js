@@ -11,7 +11,7 @@ class AuthClient extends SdkClient
      */
     async login(email, senha)
     {
-        return await this.requestJson('post', 'auth/login', {
+        return await this.requestJson('post', 'admin/auth/login', {
             email: email,
             senha: senha
         });
@@ -22,7 +22,7 @@ class AuthClient extends SdkClient
      */
     async logout(clearAccessToken = true)
     {
-        await this.requestJson('post', 'auth/logout');
+        await this.requestJson('post', 'admin/auth/logout');
 
         if (clearAccessToken) {
             this.$core.setAccessToken(null);
@@ -38,7 +38,7 @@ class AuthClient extends SdkClient
      */
     async me()
     {
-        return await this.requestJson('get', 'auth/me');
+        return await this.requestJson('get', 'admin/auth/me');
     }
 
     /**
@@ -49,7 +49,7 @@ class AuthClient extends SdkClient
      */
     async forgotPassword(email)
     {
-        return await this.requestJson('post', 'auth/forgotpassword', {
+        return await this.requestJson('post', 'admin/auth/forgotpassword', {
             email: email
         });
     }
@@ -64,7 +64,7 @@ class AuthClient extends SdkClient
      */
     async resetPassword(token, novaSenha, confirmacao)
     {
-        return await this.requestJson('post', 'auth/resetpassword', {
+        return await this.requestJson('post', 'admin/auth/resetpassword', {
             token: token,
             senha: novaSenha,
             confirmacao: confirmacao

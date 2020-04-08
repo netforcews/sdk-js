@@ -4,7 +4,7 @@ class Inquilino extends SdkResource
 {
     constructor()
     {
-        super('inquilinos');
+        super('admin/inquilinos');
     }
 }
 

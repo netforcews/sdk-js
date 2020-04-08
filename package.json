@@ -16,7 +16,7 @@
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules && npm run publicar",
         "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
-        "publicar": "node ./dist/publicar.js ./dist D:\\www\\app\\web\\public\\js"
+        "publicar": "node ./dist/publicar.js ./dist D:\\www\\apps_web\\admin\\public\\js"
     },
     "dependencies": {
         "axios": "^0.19.2"

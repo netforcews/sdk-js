@@ -4,7 +4,7 @@ class Usuario extends SdkResource
 {
     constructor()
     {
-        super('usuarios');
+        super('admin/usuarios');
     }
 }
 
