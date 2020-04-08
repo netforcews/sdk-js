@@ -119,13 +119,19 @@ class SdkCore
      * 
      * @param {String} client ID do client
      * @param {Class} classClient Nome da classe
+     * @param {Boolean} initialize Determina se classe deve ser iniciada
      * @returns {SdkCore}
      */
-    extend(client, classClient)
+    extend(client, classClient, initialize = false)
     {
         var $this = this;
 
-        this[client] = classClient;
+        var ext = classClient;
+        if (initialize) {
+            ext = new classClient();
+        }
+
+        this[client] = ext;
 
         return this;
     }

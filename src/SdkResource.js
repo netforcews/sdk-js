@@ -1,4 +1,5 @@
 const SdkClient = require('./SdkClient');
+const SdkAggregation = require('./SdkAggregation');
 
 class SdkResource extends SdkClient
 {
@@ -56,6 +57,16 @@ class SdkResource extends SdkClient
         }
 
         return await this.requestJson('delete', part, params);
+    }
+
+    /**
+     * Registar agregação no recurso.
+     */
+    setAggregation(aggregation)
+    {
+        this[aggregation] = new SdkAggregation(this.$part, aggregation);
+
+        return this;
     }
 }
 

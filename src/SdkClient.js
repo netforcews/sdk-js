@@ -52,7 +52,7 @@ class SdkClient
 
         // Tratar error
         if (res.data.error) {
-            throw res.data.error;
+            throw res.data.error.message;
         }
 
         return res.data;

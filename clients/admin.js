@@ -1,6 +1,8 @@
 const SdkClient = require('../src/SdkClient');
-const Inquilino = require('../resources/Inquilino');
-const Usuario = require('../resources/Usuario');
+const Inquilino = require('../resources/admin/Inquilino');
+const Usuario = require('../resources/admin/Usuario');
+const Grupo = require('../resources/admin/Grupo');
+const Politica = require('../resources/admin/Politica');
 
 class AdminClient extends SdkClient
 {
@@ -15,6 +17,8 @@ class AdminClient extends SdkClient
 
         this.inquilinos = new Inquilino();
         this.usuarios = new Usuario();
+        this.grupos = new Grupo();
+        this.politicas = new Politica();
     }
 
     /**

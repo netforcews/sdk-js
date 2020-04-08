@@ -1,4 +1,4 @@
-const SdkResource = require('../src/SdkResource');
+const SdkResource = require('../../src/SdkResource');
 
 class Inquilino extends SdkResource
 {

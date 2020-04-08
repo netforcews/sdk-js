@@ -70,6 +70,25 @@ class AuthClient extends SdkClient
             confirmacao: confirmacao
         });
     }
+
+    /**
+     * Verificar se usuario tem permissao para um conta
+     * 
+     * @param {String} conta id da conta
+     * @returns {Boolean}
+     */
+    async can(conta)
+    {
+        var ret = await this.requestJson('post', 'admin/auth/can', {
+            conta: conta,
+        });
+
+        if (!(ret.conta == conta)) {
+            return false;
+        }
+
+        return ret.permissao;
+    }
 }
 
 module.exports = AuthClient;
