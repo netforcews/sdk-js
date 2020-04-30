@@ -3,6 +3,7 @@ const Inquilino = require('../resources/admin/Inquilino');
 const Usuario = require('../resources/admin/Usuario');
 const Grupo = require('../resources/admin/Grupo');
 const Politica = require('../resources/admin/Politica');
+const Parametros = require('./admin_parametros');
 
 class AdminClient extends SdkClient
 {
@@ -19,6 +20,7 @@ class AdminClient extends SdkClient
         this.usuarios = new Usuario();
         this.grupos = new Grupo();
         this.politicas = new Politica();
+        this.parametros = new Parametros();
     }
 
     /**
